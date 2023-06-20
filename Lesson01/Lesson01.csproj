@@ -11,4 +11,8 @@
     <PackageReference Include="microsoft.extensions.hosting" Version="7.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>

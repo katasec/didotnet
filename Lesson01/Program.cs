@@ -7,8 +7,13 @@ using var host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
     {
         services.AddTransient<HappyHello>();
+        services.AddTransient<IHello,SadHello>();
+        services.AddTransient<Greeter>();
     })
 .Build();
 
-// Get a Happy Hello Object
-var happyHello = host.Services.GetRequiredService<HappyHello>();
+// Get a Greeter. Note the DI container will resolve the dependencies, in this case IHello
+var happyHello = host.Services.GetRequiredService<Greeter>();
+
+happyHello.Greet();
+

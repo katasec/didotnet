@@ -25,7 +25,7 @@ using var host = Host.CreateDefaultBuilder(args)
     .Build();
 ```
 
-Get registered object:
+Get registered objects:
 
 ```csharp
 var happyHello = host.Services.GetRequiredService<HappyHello>();
